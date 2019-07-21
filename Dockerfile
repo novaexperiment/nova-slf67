@@ -50,6 +50,10 @@ RUN wget http://mirror.centos.org/centos/6/os/x86_64/Packages/subversion-perl-1.
  && rpm -Uvh subversion-perl-1.6.11-15.el6_7.x86_64.rpm \
  && rm -rf *.rpm
 
+RUN yum clean all \
+ && yum -y install unzip \
+ && yum clean all
+
 # Create a me user (UID and GID should match the Mac user), add to suoders, and switch to it
 ENV USERNAME=me
 
