@@ -3,7 +3,7 @@
 FROM centos:6
 
 MAINTAINER Pengfei Ding "dingpf@fnal.gov"
-ENV REFRESHED_AT 2019-07-08
+ENV REFRESHED_AT 2020-08-13
 
 RUN mkdir -p /etc/yum/vars \
  && echo 6.7 >  /etc/yum/vars/releasever \
