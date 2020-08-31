@@ -29,7 +29,7 @@ RUN yum clean all \
  gstreamer-plugins-base-devel  \
  vim which net-tools bzip2 xorg-x11-fonts* \
  xorg-x11-server-utils xorg-x11-twm dbus dbus-x11 \
- libuuid-devel \
+ libuuid-devel emacs evince eog \ 
  && yum clean all
 
 RUN yum clean all \
