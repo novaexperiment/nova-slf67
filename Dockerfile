@@ -55,17 +55,17 @@ RUN yum clean all \
  && yum clean all
  
 # Fix SSH Config
-RUN echo '\tProtocol 2' >> /etc/ssh/ssh_config
-RUN echo '\tGSSAPIDelegateCredentials yes' >> /etc/ssh/ssh_config
-RUN echo '\tGSSAPIKeyExchange yes' >> /etc/ssh/ssh_config
-RUN echo '\tForwardX11 yes' >> /etc/ssh/ssh_config
-RUN echo 'Host 131.225.* *.fnal.gov *soudan.org' >> /etc/ssh/ssh_config
-RUN echo '\tProtocol 2' >> /etc/ssh/ssh_config
-RUN echo '\tGSSAPIAuthentication yes' >> /etc/ssh/ssh_config
-RUN echo '\tGSSAPIDelegateCredentials yes' >> /etc/ssh/ssh_config
-RUN echo '\tGSSAPIKeyExchange yes' >> /etc/ssh/ssh_config
-RUN echo '\tForwardX11Trusted yes' >> /etc/ssh/ssh_config
-RUN echo '\tForwardX11 yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tProtocol 2' >> /etc/ssh/ssh_config
+RUN echo -e '\tGSSAPIDelegateCredentials yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tGSSAPIKeyExchange yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tForwardX11 yes' >> /etc/ssh/ssh_config
+RUN echo    'Host 131.225.* *.fnal.gov *soudan.org' >> /etc/ssh/ssh_config
+RUN echo -e '\tProtocol 2' >> /etc/ssh/ssh_config
+RUN echo -e '\tGSSAPIAuthentication yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tGSSAPIDelegateCredentials yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tGSSAPIKeyExchange yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tForwardX11Trusted yes' >> /etc/ssh/ssh_config
+RUN echo -e '\tForwardX11 yes' >> /etc/ssh/ssh_config
 
 # Create a me user (UID and GID should match the Mac user), add to suoders, and switch to it
 ENV USERNAME=me
